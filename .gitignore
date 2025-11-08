@@ -1,5 +1,9 @@
+# basic Network Sniffer 
+# For Codealpha Cyber Security Internship
+
 from scapy.all import sniff, IP,TCP, UDP,ICMP
 
+# Function to process each captured packet
 def packet_sniffer(packet):
     if packet.haslayer(IP):
         src_ip =packet[IP].src
